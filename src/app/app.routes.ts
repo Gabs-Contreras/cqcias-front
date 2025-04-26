@@ -1,17 +1,8 @@
 import { Routes } from '@angular/router';
-import { ProductCrudComponent } from './components/product-crud/product-crud.component';
 import { ProductFormComponent } from './components/product-form/product-form.component';
 import { ProductViewComponent } from './components/product-view/product-view.component';
 
 export const routes: Routes = [
-  {
-    path: '',
-    component: ProductCrudComponent
-  },
-  {
-    path: 'todos',
-    component: ProductCrudComponent
-  },
   {
     path: 'nuevo',
     component: ProductFormComponent
@@ -21,7 +12,12 @@ export const routes: Routes = [
     component: ProductFormComponent
   },
   {
-    path: 'ver/:id',
+    path: 'producto/:id',
     component: ProductViewComponent
-  }
+  },
+  {
+    path: 'productos',
+    component: ProductViewComponent
+  },
+  { path: '', redirectTo: '/productos', pathMatch: 'full' }
 ];
