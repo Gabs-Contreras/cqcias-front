@@ -1,6 +1,6 @@
 // src/app/models/product.model.ts
 
-export class Product {
+export class Producto {
   id: number;
   producto: string;
   codigobarras: number;
